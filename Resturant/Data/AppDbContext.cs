@@ -12,7 +12,7 @@ namespace Resturant.Data
         public DbSet<DessertItemModel> DessertItems { get; set; }
         public DbSet<CartItemModel> CartItems { get; set; }
         public DbSet<UserModel>  User { get; set; }
-        public DbSet<OrderIsModel>   Orders { get; set; }
+        public DbSet<OrdersModel>   Orders { get; set; }
         public DbSet<OrderItemsModel>  OrderItems { get; set; }
     }
 }

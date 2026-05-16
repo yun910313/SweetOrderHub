@@ -30,7 +30,7 @@ namespace Resturant.Controllers
         public async Task<IActionResult> insertDessertItem(DessertItemModel dessertItem)
         {
             dessertItem.Id = Guid.NewGuid();
-            _context.DessertItems.Add(dessertItem);
+            await _context.DessertItems.AddAsync(dessertItem);
             await _context.SaveChangesAsync();
             return Ok();
         }
