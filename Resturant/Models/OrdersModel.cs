@@ -6,6 +6,7 @@ public class OrdersModel
     public Guid UserId {get; set;}
     public DateTime PickUpDate {get; set;}
     public string? Note {get; set;}
+    public int TotalAmount = 0;
     public DateTime CreatedAt {get; set;} = DateTime.Now;
     public string Status {get; set;}
 }

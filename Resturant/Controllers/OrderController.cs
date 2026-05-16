@@ -44,6 +44,8 @@ public class  OrderController : ControllerBase
             // 確認顧客是否存在
             var userExists = await _context.User.AnyAsync(x => x.Id == orderDto.UserId);
 
+            var totalAmount = 0;
+            
             if (!userExists)
             {
                 return BadRequest("顧客不存在");
@@ -77,7 +79,7 @@ public class  OrderController : ControllerBase
                 {
                     continue;
                 }
-
+                
                 // 檢查庫存
                 if (dessert.StockQuantity < item.Quantity)
                 {
@@ -86,6 +88,8 @@ public class  OrderController : ControllerBase
 
                 // 扣庫存
                 dessert.StockQuantity -= item.Quantity;
+                
+                totalAmount += dessert.Price * item.Quantity;
                 
                 //  建立訂單資料
                 var orderItem = new OrderItemsModel
@@ -100,6 +104,9 @@ public class  OrderController : ControllerBase
                 // 把訂單加入到資料表內
                 await _context.OrderItems.AddAsync(orderItem);
             }
+            
+            order.TotalAmount = totalAmount;
+            
             // 清空購物車資料
             _context.CartItems.RemoveRange(carItem);
             await _context.SaveChangesAsync();
