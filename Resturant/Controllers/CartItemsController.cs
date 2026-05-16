@@ -60,6 +60,8 @@ namespace Resturant.Controllers
         {
             // 確認這筆甜點存在，回傳true/false，會去找資料庫有沒有相同ID的甜點
             var dessertExists = await _context.DessertItems.AnyAsync(x => x.Id == caritemDto.DessertItemId);
+            
+            // 確認顧客是否存在
             var userEExists = await _context.User.AnyAsync(x => x.Id == caritemDto.UserId);
             if (!dessertExists  && !userEExists)
             {
