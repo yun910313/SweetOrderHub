@@ -1,0 +1,101 @@
+[
+  {
+    "ContainingType": "Resturant.Controllers.CartItemsController",
+    "Method": "GetCartItems",
+    "RelativePath": "api/CartItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Resturant.Controllers.CartItemsController",
+    "Method": "InsertCartItem",
+    "RelativePath": "api/CartItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Resturant.Controllers.DessertItemsController",
+    "Method": "GetDessertItems",
+    "RelativePath": "api/DessertItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Resturant.Controllers.DessertItemsController",
+    "Method": "insertDessertItem",
+    "RelativePath": "api/DessertItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dessertItem",
+        "Type": "Resturant.Models.DessertItemModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Resturant.Controllers.DessertItemsController",
+    "Method": "GetDessertItem",
+    "RelativePath": "api/DessertItems/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Resturant.Controllers.DessertItemsController",
+    "Method": "UpdateDessertItem",
+    "RelativePath": "api/DessertItems/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dessertItem",
+        "Type": "Resturant.Models.DessertItemModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Resturant.Controllers.DessertItemsController",
+    "Method": "DeleteDessertItem",
+    "RelativePath": "api/DessertItems/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
