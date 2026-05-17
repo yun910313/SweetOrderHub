@@ -1,0 +1,40 @@
+﻿@model List<DessertItemModel>
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <h1>甜點列表</h1>
+    @if (Model.Any())
+    {
+        @foreach (var dessert in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="col">
+                    <div src="..." class="card-img-top dessert-img" alt="..."></div>
+                    <div class="card-body">
+                        <h5 class="card-title">名稱:@dessert.Name</h5>
+                        <p class="card-text">@dessert.Description</p>
+                        <p class="card-text">價格:@dessert.Price</p>
+                        <p>庫存:@dessert.StockQuantity</p>
+                        <a href="#" class="btn btn-primary">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <h1>沒有資料</h1>
+    }
+
+</div>
+</body>
+</html>
